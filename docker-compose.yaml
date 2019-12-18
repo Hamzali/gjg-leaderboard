@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    container_name: gjg-leaderboard-app
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      MONGODB_URI: 'mongodb://mongo:27017/gjg-leaderboard'
+      REDIS_URL: 'redis://redis:6379'
+    depends_on:
+      - redis
+      - mongo
+  mongo:
+    container_name: gjg-leaderboard-mongo
+    ports:
+      - '27017:27017'
+    image: 'mongo:4'
+  redis:
+    container_name: gjg-leaderboard-redis
+    ports:
+      - '6379:6379'
+    image: 'redis:4.0.11'
