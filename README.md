@@ -6,7 +6,7 @@
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
-  
+
   <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
@@ -23,6 +23,24 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+## Notes
+Application is deployed at [Heroku](https://gjg-leaderboard.herokuapp.com/) \\
+Swagger docs for API are served at [/api](https://gjg-leaderboard.herokuapp.com/api)
+
+- NestJS with Typescript is selected for backend framework because types makes life easier and strong structure helps maintainability
+- CQRS and Event patterns are used to reduce code coupling and increase readiblity/maintainability
+- MongoDB is used as a data source because it plays nice with both NodeJS and also increases development velocity.
+- Redis is used for fast data access and leaderboard's sorted and dynamic behaviour.
+
+## Configuration
+- `REDIS_SETUP` environment variable can be set to `true` to in order to clean and re calculate the redis state on startup
+### Connection Params
+- `MONGODB_URI` 
+- `REDIS_URL`
+
+## Test Scripts
+TODO
 
 ## Description
 
@@ -72,4 +90,4 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## License
 
-  Nest is [MIT licensed](LICENSE).
+Nest is [MIT licensed](LICENSE).
