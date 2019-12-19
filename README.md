@@ -35,7 +35,7 @@ Developer docs are in the repository under `docs/` directory and also on [github
 - MongoDB is used as a data source because it plays nice with both NodeJS and also increases development velocity.
 - Redis is used for fast data access and leaderboard's sorted and dynamic behaviour.
 
-## Solutions & Future Works
+## Solutions & Ideas
 
 - **application**
   - I choosed User, Score and Leaderboard as my domain objects.
@@ -69,7 +69,7 @@ Developer docs are in the repository under `docs/` directory and also on [github
 
 ## Test Scripts
 
-I used axios and faker in order to simulate the random mutations
+I used axios and faker in order to simulate the random mutations  
 In order to populate the application with user and leaderboard data user the `test.js` script  
 run: `node test.js <app_base_url> <user_count> <submit_score_count> <step_count>`
 
