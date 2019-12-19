@@ -24,7 +24,7 @@ export class LeaderboardService {
    * Initialize leaderboards if the setup flag is set to true
    */
   async onModuleInit() {
-    if (this.configService.get('redisSetup')) {
+    if (this.configService.get('setupRedis')) {
       await this.redisService.clearAll();
       await this.userService.findAllStream(
         ({ _id: userId, display_name, country, points }: User) => {
