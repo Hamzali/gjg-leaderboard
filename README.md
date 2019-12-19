@@ -60,7 +60,7 @@ Developer docs are in the repository under `docs/` directory and also on [github
 
 ## Configuration
 
-- `REDIS_SETUP` environment variable can be set to `true` to in order to clean and re calculate the redis state on startup
+- `SETUP_REDIS` environment variable can be set to `true` to in order to clean and re calculate the redis state on startup
 
 ### Connection Params
 
